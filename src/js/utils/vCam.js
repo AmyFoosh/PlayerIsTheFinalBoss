@@ -41,6 +41,12 @@ function vCam(target) {
     vCamX += (posX - vCamX) * vCamSpeed;
     vCamY += (posY - vCamY) * vCamSpeed;
 
+    // ---- ---- ---- ---- ---- ---- ---- ---- 
+
+    // -- UI --
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- 
+
     // Apply vCam movement.
     ctx.translate(-vCamX, -vCamY);
 }

@@ -1,4 +1,12 @@
+// ---- ---- ---- ---- ---- ---- ---- ---- 
+
+// -- COLLISIONS --
+
 class Collisions {
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- 
+
+    // -- CIRCULAR COLLISION --
 
     static circularCollision(target1, target2) {
 
@@ -16,4 +24,8 @@ class Collisions {
             return false;
         }
     }
+
+    // ---- ---- ---- ---- ---- ---- ---- ---- 
 }
+
+// ---- ---- ---- ---- ---- ---- ---- ---- 

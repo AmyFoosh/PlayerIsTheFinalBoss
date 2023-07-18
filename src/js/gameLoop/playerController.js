@@ -22,14 +22,13 @@ function playerController() {
 // This class allows player movement across canvas.
 function playerMovement() {
 
-    // Call PC movement if device is a PC.
-    if (userDevice === "pc") {
-
-        playerPCMovement();
-    }
-
-    // TODO: call mobile movement if device is a phone.
+    if (userDevice === "pc") playerPCMovement();
+    // TODO: add device touch support.
 }
+
+// ---- ---- ---- ---- ---- ---- ---- ---- 
+
+// -- PC MOVEMENT --
 
 function playerPCMovement() {
 
@@ -70,6 +69,7 @@ function playerPCMovement() {
 // Draw player on canvas.
 function drawPlayer() {
 
+    // Draw player.
     ctx.fillStyle = player.color;
     ctx.beginPath();
     ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);

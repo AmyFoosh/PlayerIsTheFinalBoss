@@ -7,10 +7,13 @@ class Enemy extends Sprite {
     // ---- ---- ---- ---- ---- ---- ---- ---- 
 
     // Initial values for X, Y and player radius size.
-    constructor(x, y, radius, color) {
+    constructor(x, y, radius) {
 
         // Get access to Sprite constructor and variables.
-        super(x, y, radius);
+        super(x, y);
+
+        this.radius = radius;
+        this.speed = 1;
 
         // Pick random color.
         this.color = randomColor();
@@ -31,8 +34,8 @@ class Enemy extends Sprite {
         var angle = Math.atan2(dirY, dirX);
 
         // Draw enemy.
-        this.x += Math.cos(angle) * 4;
-        this.y += Math.sin(angle) * 4;
+        this.x += Math.cos(angle) * this.speed;
+        this.y += Math.sin(angle) * this.speed;
 
         ctx.fillStyle = this.color;
         ctx.beginPath();
